@@ -39,28 +39,42 @@ animate();
 
 // music bg saloon jazz vintage //
 //
-const audio = document.getElementById("jazz-bg");
-    const btn = document.getElementById("playPauseBtn");
+    const audioBG = document.getElementById("jazz-bg");
+    const btnBG = document.getElementById("playPauseBtn");
     let musicStarted = false;
 
     // Quand l’utilisateur clique quelque part sur la page
     document.body.addEventListener("click", () => {
       if (!musicStarted) {
-        audio.play();
+        audioBG.play();
         musicStarted = true;
-        btn.style.display = "block"; // montrer le bouton
-        btn.textContent = "⏸"; // mettre pause comme premier état
+        btnBG.style.display = "block"; // montrer le bouton
+        btnBG.textContent = "⏸"; // mettre pause comme premier état
       }
     });
 
     // Gérer le Play/Pause
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation(); // éviter de relancer l’audio avec le clic body
-      if (audio.paused) {
-        audio.play();
-        btn.textContent = "⏸";
+    btnBG.addEventListener("click", (e) => {
+      e.stopPropagation();// éviter de relancer l’audio avec le clic body 
+      if (audioBG.paused) {
+        audioBG.play();
+        btnBG.textContent = "⏸ ";
       } else {
-        audio.pause();
-        btn.textContent = "▶";
+        audioBG.pause();
+        btnBG.textContent = "▶";
       }
     });
+
+// Barre d’espace pour Play/Pause
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") {
+    e.preventDefault(); // évite le scroll
+    if (audioBG.paused) {
+      audioBG.play();
+      btnBG.textContent = "⏸ ";
+    } else {
+      audioBG.pause();
+      btnBG.textContent = "▶";
+    }
+  }
+});
