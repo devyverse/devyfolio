@@ -36,3 +36,31 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+// music bg saloon jazz vintage //
+//
+const audio = document.getElementById("jazz-bg");
+    const btn = document.getElementById("playPauseBtn");
+    let musicStarted = false;
+
+    // Quand l’utilisateur clique quelque part sur la page
+    document.body.addEventListener("click", () => {
+      if (!musicStarted) {
+        audio.play();
+        musicStarted = true;
+        btn.style.display = "block"; // montrer le bouton
+        btn.textContent = "⏸"; // mettre pause comme premier état
+      }
+    });
+
+    // Gérer le Play/Pause
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // éviter de relancer l’audio avec le clic body
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = "⏸";
+      } else {
+        audio.pause();
+        btn.textContent = "▶";
+      }
+    });
