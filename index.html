@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Dévy</title>  
-  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio Dévy</title>
+  <!-- Favicon standard -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo_dr.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo_dr.png" />
+
+  <!-- Icône Apple -->
+  <link rel="apple-touch-icon" href="assets/images/logo_dr.png" />
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#3e2f2f" />
+   
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <canvas id="background"></canvas>
@@ -14,11 +25,15 @@
       <ul>
         <li><a href="#about">À propos</a></li>
         <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">
+			<img src="assets/icon/phone.png" alt="Contact" style="height:24px;" title="Contactez-moi">
+		</a>
+	</li>
       </ul>
       <button id="theme-toggle">🌙</button>
       <audio id="jazz-bg" src="assets/audio/salon-jazz.mp3" autoplay loop></audio>
       <button id="playPauseBtn">▶</button>
+      <div class="steam-pulse"></div>
     </nav>
     <section class="hero">
       <h2>Développeur Web Créatif</h2>

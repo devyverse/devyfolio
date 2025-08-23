@@ -22,6 +22,11 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background 0.5s, color 0.5s;
+  /*user no select*/
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 nav {
@@ -47,6 +52,16 @@ nav ul li {
 nav ul li a {
   color: var(--text-color);
   text-decoration: none;
+}
+
+nav ul li a  {
+  height: 24px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+nav ul li a:hover img {
+  transform: scale(1.1);
 }
 
 #theme-toggle {
@@ -174,3 +189,33 @@ footer {
     #playPauseBtn:hover {
       transform: scale(1.1);
     }
+
+    /* Vapeur pulsée */
+.steam-pulse {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 20%, transparent 70%);
+  animation: steamRise 2.5s infinite ease-in-out;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+@keyframes steamRise {
+  0% {
+    transform: translateX(-50%) translateY(0) scaleX(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px) scaleX(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-40px) scaleX(0.8);
+    opacity: 0;
+  }
+}
+

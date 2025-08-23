@@ -42,6 +42,7 @@ animate();
     const audioBG = document.getElementById("jazz-bg");
     const btnBG = document.getElementById("playPauseBtn");
     let musicStarted = false;
+    document.getElementById("jazz-bg").volume = 0.1; 
 
     // Quand l’utilisateur clique quelque part sur la page
     document.body.addEventListener("click", () => {
@@ -78,3 +79,23 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
+
+//Bloquer clic droit
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
+// Bloquer copier, coller, couper
+["copy", "paste", "cut"].forEach(evt => {
+  document.addEventListener(evt, (e) => {
+    e.preventDefault();
+  });
+});
+
+//  Bloquer raccourcis clavier (Ctrl+C, Ctrl+V, Ctrl+X)
+document.addEventListener("keydown", (e) => {
+  if ((e.ctrlKey || e.metaKey) && ["c", "v", "x", "u"].includes(e.key.toLowerCase())) {
+    e.preventDefault();
+  }
+});
+
