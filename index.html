@@ -14,19 +14,22 @@
   <!-- Manifest PWA -->
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#3e2f2f" />
-   
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="styles/style-smoke-effect.css"/>
+  <link 
+  <link rel="stylesheet" href="styles/style-btnPlayPaused.css"/>
 </head>
 <body>
-  <canvas id="background"></canvas>
+<canvas id="smoke-bg"></canvas>
+<canvas id="background"></canvas>
   <header>
     <nav>
       <h1>DevyVerse</h1>
       <ul>
-        <li><a href="#about">À propos</a></li>
+      <li><a href="#about"><img src="assets/icon/profil.png" alt="A propos" title ="Au sujet de moi" style="height:30px;"></a></li>
         <li><a href="#projects">Projets</a></li>
         <li><a href="#contact">
-			<img src="assets/icon/phone.png" alt="Contact" style="height:24px;" title="Contactez-moi">
+			<img src="assets/icon/phone.png" alt="Contact" style="height:30px;" title="Contactez-moi">
 		</a>
 	</li>
       </ul>
@@ -79,7 +82,8 @@
   <footer>
     <p>© 2025 Dévy. Tous droits réservés.</p>
   </footer>
-
   <script src="script.js"></script>
+  <script src="js/smoke-effect.js"></script>
+  <script src="js/particule-effect.js></script>
 </body>
 </html>
