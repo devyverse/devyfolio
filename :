@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"; charset="UTF-8" />
-  <meta name="description" content="Développeur web créatif menant vos projets à leurs termes. Voici donc mon portfolio ,faites de mes aventures"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Dévy</title>
   <!-- Favicon standard -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo_dr.png" />
@@ -21,7 +21,6 @@
 <body>
 <canvas id="smoke-bg"></canvas>
 <canvas id="background"></canvas>
-<canvas id="road"></canvas>
   <header>
     <nav>
       <h1>DevyVerse</h1>
@@ -86,5 +85,7 @@
     <p>© 2025 Dévy. Tous droits réservés.</p>
   </footer>
   <script src="script.js"></script>
+  <script src="js/smoke-effect.js"></script>
+  <script src="js/particule-effect.js></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #0f2027;
+  --bg-color: ;/*#0f2027;*/
   --text-color: #fff;
   --accent: #00f7ff;
   --card-bg: rgba(255, 255, 255, 0.1);
@@ -33,7 +33,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 nav h1 {
@@ -101,7 +101,11 @@ nav ul li a:hover img {
 .about, .projects, .contact {
   padding: 60px 20px;
 }
-
+#about,.about{
+	display:flex;
+	justify-content:space-between;
+	padding-right: 20px;
+}
 .skills .bar {
   height: 10px;
   background: var(--accent);
