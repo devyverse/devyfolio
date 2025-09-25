@@ -3,85 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Devy Saloon</title>
+  <title>Portfolio Dévy</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="assets/icon/favicon-dr.png" />
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#3e2f2f" />
 </head>
 <body>
- <!-- <canvas id="galaxy-bg"></canvas>
-  <canvas id="smoke-bg"></canvas> -->
-  <!-- NAV BAR -->
+  <canvas id="background"></canvas>
   <header>
-    <nav class="navbar">
-      <h1>Porfolio DEVY</h1>
-      <ul class="nav-links">
-        <li><a href="#about"><img src="assets/icon/profil.png" alt="A propos" title ="Au sujet de moi" style="height:30px;"></a></li>
-        <li><a href="#skills"><img src="assets/icon/skils.png" alt="mes compétences" title="Mes Compétences" style="height:30px;"/></a></li>
-        <li><a href="#projects"><img src="assets/icon/briefcase.png" alt="mes projets" title="Mes projets" style="height:30px;" /> </a></li>
-        <li><a href="#contact"><img src="assets/icon/phone.png" alt="Contact" class="nav-icon" style="height:35px;" title="Contactez-moi"/></a></li>
-      </ul>
-     <button id="theme-toggle">🌙</button>
-      <audio id="jazz-bg" src="assets/audio/salon-jazz.mp3" autoplay loop></audio>
-      <button id="playPauseBtn">▶</button>
-      <div class="steam-pulse"></div>
-     
-      <button class="hamburger" id="hamburger-btn">
-        <span></span><span></span><span></span>    
-      </button>
-      
-    </nav>
-  </header>
- <!-- AVATAR-->
- <!--
-<div class="avatar">
-  <div class="head">
-    <div class="hair"></div>
-    <div class="eye left"><div class="pupil"></div></div>
-    <div class="eye right"><div class="pupil"></div></div>
-    <div class="beard"></div>
-  </div>
-  <div class="neck"></div>
-  <div class="body">
-    <div class="shirt"></div>
-    <div class="jacket"></div>
-  </div>
-</div>
--->
-  <div class="horizontal-wrapper">
-    <section class="panel" id="home">
-      <h2>Bienvenue dans mon salon</h2>
-      <p>Installez-vous, je vous montre ce que je peux créer pour vous.</p>
-    </section>
-    <section class="panel" id="about">
-      <h2>À propos</h2>
-      <p>Je suis en formation, prêt à rejoindre une entreprise en alternance pour concevoir vos solutions numériques.</p>
-    </section>
-    <section class="panel" id="skills">
-      <h2>Compétences</h2>
+    <nav>
+      <h1>Dévy</h1>
       <ul>
-        <li>Applications web & mobile</li>
-        <li>Sites vitrines & e-commerce</li>
-        <li>UI/UX, responsive design</li>
-        <li>Maintenance & documentation</li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+    <section class="hero">
+      <h2>Développeur Web Créatif</h2>
+      <p>Je transforme des idées en expériences digitales.</p>
+      <a href="#about" class="btn">En savoir plus</a>
     </section>
-    <section class="panel" id="projects">
-      <h2>Projets</h2>
-      <p>Découvrez mes réalisations concrètes et ce que j’ai appris sur chaque mission.</p>
-    </section>
-    <section class="panel" id="contact">
-      <h2>Contact</h2>
-      <p>📞 Prenons un café ensemble pour parler de vos besoins.</p>
-    </section>
-  </div>
+  </header>
 
-  <audio id="jazz-bg" src="assets/audio/salon-jazz.mp3" loop></audio>
- <script src="script.js"></script>
- <script>
-   console.log("ERROR : Ce site est en cours de construction")
-   alerte("ERROR : Ce site est en cours de construction")
- </script>
+  <section id="about" class="about">
+    <h2>À propos de moi</h2>
+    <p>Passionné par le web, je crée des interfaces modernes et interactives.</p>
+    <div class="skills">
+      <div><span>HTML</span><div class="bar html"></div></div>
+      <div><span>CSS</span><div class="bar css"></div></div>
+      <div><span>JavaScript</span><div class="bar js"></div></div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Mes projets</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>Portfolio Design</h3>
+        <p>Un site élégant avec animations CSS.</p>
+      </div>
+      <div class="card">
+        <h3>Application météo</h3>
+        <p>Application JavaScript connectée à une API météo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Dévy. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
