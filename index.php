@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta description="Bienvenue saloon Dévy">
+  <meta http-equiv="refresh" content="30">
   <title>Portfolio Dévy</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet"  href="style.css" />
+  
+
 </head>
 <body>
   <canvas id="background"></canvas>
+  <canvas id="smoke-bg"></canvas>
   <header>
     <nav>
       <h1>Dévy</h1>
@@ -17,6 +22,24 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button id="theme-toggle">🌙</button>
+      <select class="google_translate_element">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+      </select>
+      <div class="google_translate_element" style="opacity: 0.25;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fr',
+      includedLanguages: 'en,es,de,it,pt',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </nav>
     <section class="hero">
       <h2>Développeur Web Créatif</h2>
@@ -63,13 +86,16 @@
     <p>© 2025 Dévy. Tous droits réservés.</p>
   </footer>
 
+
   <script src="main.js"></script>
-  <script type="text/javascript">
+  <script src="js/animation.js"></script>
+
+  <!--<script type="text/javascript">
       document.write("ERROR : Ce site est temporairement désactivé pour des raisons de maintenance ... ")
       document.write("Veuillez réssayer ultérieurement.")
-  </script>
+  </script>-->
   <noscript>
-    VOtre navigateur ne prends pas en charge ou a désactivité JavaScript
+    Votre navigateur ne prends pas en charge ou a désactivité JavaScript
   </noscript>
 </body>
 </html>
