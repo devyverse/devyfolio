@@ -1,0 +1,14 @@
+{
+  "hero_title": "Développeur Web Créatif",
+  "hero_subtitle": "Je transforme des idées en expériences digitales.",
+  "about_title": "À propos de moi",
+  "about_text": "Passionné par le web, je crée des interfaces modernes et interactives.",
+  "projects_title": "Mes projets",
+  "project1_title": "Portfolio Design",
+  "project1_desc": "Un site élégant avec animations CSS.",
+  "project2_title": "Application météo",
+  "project2_desc": "Application JavaScript connectée à une API météo.",
+  "contact_title": "Contact",
+  "contact_button": "Envoyer",
+  "footer": "© 2025 Dévy. Tous droits réservés."
+}

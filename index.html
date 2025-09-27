@@ -3,56 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta description="Bienvenue saloon Dévy">
-  <meta http-equiv="refresh" content="30">
-  <title>Portfolio Dévy</title>
-  <link rel="stylesheet"  href="style.css" />
+  <meta name="description" content="Bienvenue dans le saloon de Dévy">
+  <meta http-equiv="refresh" content="100000">
+  <title data-i18n="page_title">Portfolio Dévy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/icon/favicon-dr.png" type="image/x-icon">
 </head>
 
 <body>
   <canvas id="background"></canvas>
   <canvas id="smoke-bg"></canvas>
+
   <header>
     <nav>
       <h1>Dévy</h1>
       <ul>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle">🌙</button>
-      <audio id="jazz-bg" src="ton-fichier.mp3" loop></audio>
-      <button id="playPauseBtn" style="display:none;">▶</button>
-
-<!--        <select class="google_translate_element">
-          <option value="fr">Français</option>
-          <option value="en">English</option>
-          <option value="de">Deutsch</option>
-          <option value="es">Español</option>
-          <option value="it">Italiano</option>
-      </select>
-      <div class="google_translate_element" style="opacity: 0.25;"></div>-->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'fr',
-      includedLanguages: 'en,es,de,it,pt',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+      <audio id="jazz-bg" src="assets/audio/salon-jazz-swing.mp3" loop></audio>
+      <button id="playPauseBtn">▶</button>
+      
+      <div class="nav-controls">
+        <button id="theme-toggle" aria-label="Changer le thème">🌙</button>
+        <button id="lang-toggle" aria-label="Changer la langue">🌐 EN/FR</button>
+      </div>
     </nav>
+
     <section class="hero">
-      <h2>Développeur Web Créatif</h2>
-      <p>Je transforme des idées en expériences digitales.</p>
-      <a href="#about" class="btn">En savoir plus</a>
+      <h2 data-i18n="hero_title">Développeur Web Créatif</h2>
+      <p data-i18n="hero_subtitle">Je transforme des idées en expériences digitales.</p>
+      <a href="#about" class="btn" data-i18n="hero_button">En savoir plus</a>
     </section>
   </header>
 
   <section id="about" class="about">
-    <h2>À propos de moi</h2>
-    <p>Passionné par le web, je crée des interfaces modernes et interactives.</p>
+    <h2 data-i18n="about_title">À propos de moi</h2>
+    <p data-i18n="about_text">Passionné par le web, je crée des interfaces modernes et interactives.</p>
     <div class="skills">
       <div><span>HTML</span><div class="bar html"></div></div>
       <div><span>CSS</span><div class="bar css"></div></div>
@@ -61,48 +50,41 @@
   </section>
 
   <section id="projects" class="projects">
-    <h2>Mes projets</h2>
+    <h2 data-i18n="projects_title">Mes projets</h2>
     <div class="project-grid">
       <div class="card">
-        <h3>Portfolio Design</h3>
-        <p>Un site élégant avec animations CSS.</p>
+        <h3 data-i18n="project1_title">Portfolio Design</h3>
+        <p data-i18n="project1_desc">Un site élégant avec animations CSS.</p>
       </div>
       <div class="card">
-        <h3>Application météo</h3>
-        <p>Application JavaScript connectée à une API météo.</p>
+        <h3 data-i18n="project2_title">Application météo</h3>
+        <p data-i18n="project2_desc">Application JavaScript connectée à une API météo.</p>
       </div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
+    <h2 data-i18n="contact_title">Contact</h2>
     <form>
       <input type="text" placeholder="Votre nom" required />
       <input type="email" placeholder="Votre email" required />
       <textarea placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
+      <button type="submit" data-i18n="contact_button">Envoyer</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 Dévy. Tous droits réservés.</p>
+    <p data-i18n="footer">© 2025 Dévy. Tous droits réservés.</p>
   </footer>
 
+  <noscript>
+    <p data-i18n="noscript">Votre navigateur ne prend pas en charge ou a désactivé JavaScript.</p>
+  </noscript>
 
-  
-  <!--<script src="js/animation.js"></script>-->
   <script src="js/smoke.js" defer></script>
   <script src="js/galaxy.js" defer></script>
   <script src="js/audio.js" defer></script>
+  <script src="js/i18n.js" defer></script>
   <script src="main.js" defer></script>
-
-
-  <!--<script type="text/javascript">
-      document.write("ERROR : Ce site est temporairement désactivé pour des raisons de maintenance ... ")
-      document.write("Veuillez réssayer ultérieurement.")
-  </script>-->
-  <noscript>
-    Votre navigateur ne prends pas en charge ou a désactivité JavaScript
-  </noscript>
 </body>
 </html>

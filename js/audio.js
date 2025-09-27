@@ -1,38 +1,39 @@
-document.addEventListener("DOMContentLoaded", () => {
+
   const audioBG = document.getElementById("jazz-bg");
   const btnBG = document.getElementById("playPauseBtn");
   let musicStarted = false;
 
   if (audioBG) {
-    audioBG.volume = 0; // volume initial à 0
+    audioBG.volume = 0;
+    audioBG.loop = true;
 
-    // Démarrage automatique au premier clic sur la page
+
     document.body.addEventListener("click", () => {
       if (!musicStarted) {
+        audioBG.volume = 0.08;
         audioBG.play();
         musicStarted = true;
 
-        // Fade-in progressif
         const fadeIn = setInterval(() => {
-          if (audioBG.volume < 0.5) {
-            audioBG.volume = Math.min(audioBG.volume + 0.01, 0.5);
+          if (audioBG.volume < 0.08) {
+            audioBG.volume = Math.min(audioBG.volume + 0.005, 0.08);
           } else {
             clearInterval(fadeIn);
           }
-        }, 100);
+        }, 150);
 
-        if (btnBG) {
+        /*if (btnBG) {
           btnBG.style.display = "block";
           btnBG.textContent = "⏸";
-        }
+        }*/
       }
     });
 
-    // Bouton Play/Pause
     if (btnBG) {
       btnBG.addEventListener("click", (e) => {
-        e.stopPropagation(); // évite de relancer via body
+        e.stopPropagation();
         if (audioBG.paused) {
+          audioBG.volume = 0.08;
           audioBG.play();
           btnBG.textContent = "⏸";
         } else {
@@ -42,11 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Barre d’espace pour Play/Pause
     document.addEventListener("keydown", (e) => {
       if (e.code === "Space") {
         e.preventDefault();
         if (audioBG.paused) {
+          audioBG.volume = 0.08;
           audioBG.play();
           if (btnBG) btnBG.textContent = "⏸";
         } else {
@@ -56,4 +57,3 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});

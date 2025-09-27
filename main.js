@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
   // Thème toggle
   const themeToggle = document.getElementById("theme-toggle");
   if (themeToggle) {
@@ -8,71 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Music
-  const audioBG = document.getElementById("jazz-bg");
-  const btnBG = document.getElementById("playPauseBtn");
-  let musicStarted = false;
-
-  if (audioBG) {
-    audioBG.volume = 0.5;
-
-    document.body.addEventListener("click", () => {
-      if (!musicStarted) {
-        audioBG.play();
-        musicStarted = true;
-        if (btnBG) {
-          btnBG.style.display = "block";
-          btnBG.textContent = "⏸";
-        }
+function toggleTranslation() {
+  const iframe = document.querySelector("iframe.goog-te-menu-frame");
+  if (iframe) {
+    const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    const langButtons = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+    langButtons.forEach(btn => {
+      if (btn.innerText.toLowerCase().includes("english")) {
+        btn.click();
       }
     });
-
-    if (btnBG) {
-      btnBG.addEventListener("click", (e) => {
-        e.stopPropagation();
-        if (audioBG.paused) {
-          audioBG.play();
-          btnBG.textContent = "⏸";
-        } else {
-          audioBG.pause();
-          btnBG.textContent = "▶";
-        }
-      });
-    }
-
-    document.addEventListener("keydown", (e) => {
-      if (e.code === "Space") {
-        e.preventDefault();
-        if (audioBG.paused) {
-          audioBG.play();
-          if (btnBG) btnBG.textContent = "⏸";
-        } else {
-          audioBG.pause();
-          if (btnBG) btnBG.textContent = "▶";
-        }
-      }
-    });
+  } else {
+    alert("Traduction non encore chargée. Réessayez dans quelques secondes.");
   }
+}
 
-  // Traduction
-  const langSwitcher = document.getElementById("languageSwitcher");
-  if (langSwitcher) {
-    langSwitcher.addEventListener("change", function () {
-      const lang = this.value;
-      const iframe = document.querySelector("iframe.goog-te-menu-frame");
-      if (iframe) {
-        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        const langButtons = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
-        langButtons.forEach((btn) => {
-          if (btn.innerText.toLowerCase().includes(lang)) {
-            btn.click();
-          }
-        });
-      } else {
-        alert("Traduction non encore chargée. Réessayez dans quelques secondes.");
-      }
-    });
-  }
 
   // Scroll horizontal
   /*
@@ -100,4 +50,4 @@ document.addEventListener("DOMContentLoaded", () => {
   let lang = navigator.languages ? navigator.languages[0] : navigator.language;
   let shortLang = lang.split(/[-_]/)[0];
   console.log(lang, shortLang);
-});
+

@@ -1,0 +1,14 @@
+{
+  "hero_title": "Creative Web Developer",
+  "hero_subtitle": "I turn ideas into digital experiences.",
+  "about_title": "About Me",
+  "about_text": "Passionate about the web, I create modern and interactive interfaces.",
+  "projects_title": "My Projects",
+  "project1_title": "Portfolio Design",
+  "project1_desc": "An elegant site with CSS animations.",
+  "project2_title": "Weather App",
+  "project2_desc": "JavaScript app connected to a weather API.",
+  "contact_title": "Contact",
+  "contact_button": "Send",
+  "footer": "© 2025 Dévy. All rights reserved."
+}
