@@ -1,6 +1,6 @@
 // animation smoke bg 
 
-const smokeCanvas = document.getElementById("smoke-bg");
+const smokeCanvas = document.getElementById("#smoke-bg");
 const smokeCtx = smokeCanvas.getContext("2d");
 smokeCanvas.width = window.innerWidth;
 smokeCanvas.height = window.innerHeight;
@@ -43,7 +43,7 @@ function drawSmoke() {
 drawSmoke();
 
 // animation : particule galaxy stars
-const canvas = document.getElementById('background');
+const canvas = document.getElementById('#background');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -78,7 +78,7 @@ animate();
 
 
 // Particule effect //
-const canvas = document.getElementById('background');
+const canvas = document.getElementById('#background');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;

@@ -7,9 +7,8 @@
   <meta http-equiv="refresh" content="30">
   <title>Portfolio Dévy</title>
   <link rel="stylesheet"  href="style.css" />
-  
-
 </head>
+
 <body>
   <canvas id="background"></canvas>
   <canvas id="smoke-bg"></canvas>
@@ -21,8 +20,11 @@
         <li><a href="#projects">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-<!--      <button id="theme-toggle">🌙</button>
-      <select class="google_translate_element">
+      <button id="theme-toggle">🌙</button>
+      <audio id="jazz-bg" src="ton-fichier.mp3" loop></audio>
+      <button id="playPauseBtn" style="display:none;">▶</button>
+
+<!--        <select class="google_translate_element">
           <option value="fr">Français</option>
           <option value="en">English</option>
           <option value="de">Deutsch</option>
@@ -87,8 +89,13 @@
   </footer>
 
 
-  <script src="main.js"></script>
-  <script src="js/animation.js"></script>
+  
+  <!--<script src="js/animation.js"></script>-->
+  <script src="js/smoke.js" defer></script>
+  <script src="js/galaxy.js" defer></script>
+  <script src="js/audio.js" defer></script>
+  <script src="main.js" defer></script>
+
 
   <!--<script type="text/javascript">
       document.write("ERROR : Ce site est temporairement désactivé pour des raisons de maintenance ... ")
