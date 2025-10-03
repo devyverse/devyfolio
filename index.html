@@ -4,41 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Bienvenue dans le saloon de Dévy">
-  <meta http-equiv="refresh" content="100000">
+  <meta http-equiv="refresh" content="10">
   <title data-i18n="page_title">Portfolio Dévy</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/icon/favicon-dr.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+<!--<button id="burger" aria-label="Menu">&#9776;</button>-->
   <canvas id="background"></canvas>
-  <canvas id="smoke-bg"></canvas>
+  <!--<canvas id="smoke-bg"></canvas>-->
 
-  <header>
-    <nav>
-      <h1>Dévy</h1>
-      <ul>
-        <li><a href="#about" data-i18n="nav_about">À propos</a></li>
-        <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    <nav class= "navbar">
+      <ul class="navbar-menu">
+    <li><a class ="active" href="#about" alt="about"><i class ="fa fa-home" style='font-size:40px;'></i></a></li>
+      <li><a href="#projects" alt="projet"><i class='fa fa-briefcase' style='font-size:36px;'></i></a></li>
+      <li><a href="#contact" alt="contact"><i class="fa fa-envelope" style='font-size:36px;'></i></a></li>
       </ul>
-    
+</nav>
+ <header>    
       <audio id="jazz-bg" src="assets/audio/salon-jazz-swing.mp3" loop></audio>
-      <button id="playPauseBtn">▶</button>
+      <button id="playPauseBtn"> ▶</button>
       
       <div class="nav-controls">
         <button id="theme-toggle" aria-label="Changer le thème">🌙</button>
         <button id="lang-toggle" aria-label="Changer la langue">🌐 EN/FR</button>
       </div>
-    </nav>
-
     <section class="hero">
-      <h2 data-i18n="hero_title">Développeur Web Créatif</h2>
+      <h2 data-i18n="hero_title">Concepteur App</h2>
       <p data-i18n="hero_subtitle">Je transforme des idées en expériences digitales.</p>
       <a href="#about" class="btn" data-i18n="hero_button">En savoir plus</a>
     </section>
   </header>
-
+  
+<main>
   <section id="about" class="about">
     <h2 data-i18n="about_title">À propos de moi</h2>
     <p data-i18n="about_text">Passionné par le web, je crée des interfaces modernes et interactives.</p>
@@ -66,16 +66,17 @@
   <section id="contact" class="contact">
     <h2 data-i18n="contact_title">Contact</h2>
     <form>
-      <input type="text" placeholder="Votre nom" required />
-      <input type="email" placeholder="Votre email" required />
-      <textarea placeholder="Votre message" required></textarea>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" required></textarea>
       <button type="submit" data-i18n="contact_button">Envoyer</button>
     </form>
   </section>
-
+</main>
   <footer>
-    <p data-i18n="footer">© 2025 Dévy. Tous droits réservés.</p>
+    <p data-i18n="footer">&copy; Tous droits réservés | DevyVerse | 2025 </p>
   </footer>
+
 
   <noscript>
     <p data-i18n="noscript">Votre navigateur ne prend pas en charge ou a désactivé JavaScript.</p>
@@ -83,7 +84,7 @@
 
   <script src="js/smoke.js" defer></script>
   <script src="js/galaxy.js" defer></script>
-  <script src="js/audio.js" defer></script>
+ <!-- <script src="js/audio.js" defer></script>-->
   <script src="js/i18n.js" defer></script>
   <script src="main.js" defer></script>
 </body>

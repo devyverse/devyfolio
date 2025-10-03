@@ -51,3 +51,11 @@ function toggleTranslation() {
   let shortLang = lang.split(/[-_]/)[0];
   console.log(lang, shortLang);
 
+//menu-burger   
+const burger = document.getElementById('burger');
+const navList = document.querySelector('nav ul');
+
+burger.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+

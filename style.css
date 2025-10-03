@@ -4,7 +4,9 @@
   --accent: #00f7ff;
   --card-bg: rgba(255, 255, 255, 0.1);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body.light-theme{
   --bg-color: #f0f0f0;
   --text-color: #222;
@@ -32,33 +34,54 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+#logo{
+  text-transform: uppercase;
+  position : absolute;
+  top : 10px ;
+  left:  150px;
 }
+.navbar{
+  display:block;
+  position: fixed;
+  border-radius: 40px;
+  z-index:20;
+  top : 50%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  background:var(--card-bg);
 
-nav h1 {
-  font-size: 24px;
 }
-
-nav ul {
-  display: flex;
-  list-style: none;
+#navbar-menu {
+  background-color: #125863;
+  border-radius:40px;
 }
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: var(--text-color);
+#navbar-menu a {
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease; 
+  color: white; 
+  font-size: 36px;
   text-decoration: none;
 }
-
+#navbar-menu a:hover {
+  background-color: #000;
+  border-radius: 40px;
+}
+#active {
+  background-color: #04AA6D;
+  border-radius: 40px;
+}
+i{
+ padding: 20px 10px 30px;
+}
+main{
+  padding: 150px;
+}
+nav,ul, li, a {
+  color: var(--text-color);
+  text-decoration: none;
+  list-style:none;
+}
 #theme-toggle{
   background: none;
   border: 2px solid var(--accent);
@@ -67,6 +90,26 @@ nav ul li a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+/*
+#burger {
+  font-size: 32px;
+  color: var(--accent);
+  background: rgba(0, 247, 255, 0.1);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 247, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#burger:hover {
+  transform: scale(1.1);
+  background: rgba(0, 247, 255, 0.2);
+}
+*/
+
 
 .hero {
   text-align: center;
@@ -87,15 +130,31 @@ nav ul li a {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
+  width:25%;
   background: var(--accent);
   color: #000;
-  border-radius: 5px;
+  border-radius: 20px;
   text-decoration: none;
 }
 
-.about, .projects, .contact {
+.hero {
   padding: 60px 20px;
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
 }
+.about,.projects, .contact{
+ height:100vh;
+  width:100%;
+  display: flex;
+  justify-content:center;
+  align-items:left;
+  flex-direction: column;
+}
+
 
 .skills .bar {
   height: 10px;
@@ -104,9 +163,15 @@ nav ul li a {
   border-radius: 5px;
 }
 
-.skills .html { width: 90%; }
-.skills .css { width: 80%; }
-.skills .js { width: 70%; }
+.skills .html { 
+width: 90%; 
+}
+.skills .css { 
+width: 80%; 
+}
+.skills .js { 
+width: 70%; 
+}
 
 .project-grid {
   display: flex;
@@ -168,19 +233,20 @@ footer {
       bottom: 20px;
       left: 20px;
       background: rgba(15,32,39,0.75);
-      color: rgba(0,247,255,0.2);
+      color: rgba(0,247,255,0.75);
       border: none;
       border-radius: 50%;
       width: 50px;
       height: 50px;
       font-size: 22px;
       cursor: pointer;
-      display: none; /* caché au départ */
+      display: relative; /* caché au départ * : none (based)*/
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       transition: transform 0.2s ease;
 }
 #playPauseBtn:hover {
       transform: scale(1.1);
+     /* display: relative;*/
 }
 
 #smoke-bg {
@@ -194,8 +260,10 @@ footer {
 
 .nav-controls {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
+  flex-direction : row;
+  justify-content:flex-end;
 }
 
 #theme-toggle,
@@ -219,4 +287,88 @@ footer {
 #lang-toggle:hover {
   background: rgba(0, 247, 255, 0.1);
   color: var(--text-color);
+}
+/*_____________responsive__________*/
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .project-grid {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  form input, form textarea {
+    font-size: 1rem;
+  }
+
+  #playPauseBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .project-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #burger {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 100;
+  }
+
+nav ul {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+nav ul.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 }
