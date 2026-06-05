@@ -48,9 +48,11 @@ Ce portfolio est en constante amélioration. Je teste, j’apprends, je corrige.
 
 ## 📬 Me contacter
 
-Tu veux échanger, collaborer ou juste discuter ?  
-https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white[LinkedIn](https://www.linkedin.com/in/devyreale-dev/)
-https://img.shields.io/badge/Email-Contact-red?logo=gmail&logoColor=white[Email](mailto:reale.devy2000@gmail.com)
+Tu veux échanger, collaborer ou juste discuter ?
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/devyreale-dev/)
+[![Email](https://img.shields.io/badge/Email-Contact-red?logo=gmail&logoColor=white)](mailto:reale.devy2000@gmail.com)
+
 
 ## 🌀 Remerciements
 
