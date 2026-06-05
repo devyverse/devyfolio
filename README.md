@@ -30,21 +30,17 @@ Ce portfolio évoluera au fil de mes apprentissages et découvertes.
 - Créer une vitrine simple, claire et personnelle  
 
 ## 📁 Structure du projet
-devyverse/
 
-├──> index.html           # Page d'accueil du portfolio
-├──> styles/
-│   └──>main.css         # Fichier principal de styles
-├──> scripts/
-│   └──> main.js          # Fichier principal JavaScript
-├──> assets/
-│   ├──> images/          # Logos, illustrations, photos
-│   └──> icons/           # Icônes SVG ou PNG
-├──> pages/
-│   ├──> about.html       # Page "À propos"
-│   └──> contact.html     # Page de contact
-├──> .gitignore           # Fichiers à exclure du dépôt
-├──> README.md            # Présentation du projet
+- **index.html** — Point d’entrée du site, structure principale du portfolio.
+- **styles/style.css** — Styles globaux, variables, layout, responsive.
+- **js/main.js** — Logique JavaScript : interactions, animations, DOM.
+- **assets/images/** — Ressources visuelles (photos, illustrations).
+- **assets/images/icons/** — Icônes SVG/PNG utilisées dans l’UI.
+- **pages/about.html** — Page de présentation personnelle.
+- **pages/contact.html** — Formulaire ou informations de contact.
+- **.gitignore** — Exclusions Git (node_modules, cache, etc.).
+- **README.md** — Documentation du projet.
+
 
 ## 🌱 En cours
 
