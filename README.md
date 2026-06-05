@@ -15,10 +15,12 @@ Mon anglais est en cours d’amélioration — je vise l’international, un com
 
 Je travaille principalement avec :
 
-- HTML  
-- CSS  
-- JavaScript  
-- Git & GitHub  
+![Status](https://img.shields.io/badge/Status-En%20d%C3%A9veloppement-blue)
+![Version](https://img.shields.io/badge/Version-1.0.0-purple)
+![Passion](https://img.shields.io/badge/Made%20with-Passion-red)
+![Stack](https://img.shields.io/badge/HTML-CSS-JS-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 
 Ce portfolio évoluera au fil de mes apprentissages et découvertes.
 
