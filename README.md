@@ -1,3 +1,9 @@
+![Status](https://img.shields.io/badge/Status-En%20d%C3%A9veloppement-blue)
+![Version](https://img.shields.io/badge/Version-1.0.0-purple)
+![Passion](https://img.shields.io/badge/Made%20with-Passion-red)
+![Stack](https://img.shields.io/badge/HTML-CSS-JS-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 # 🌌 DEVYVERSE
 
 Bienvenue dans mon univers numérique — **devyverse**, un portfolio web personnel conçu pour apprendre, créer et évoluer au fil du temps.
@@ -14,13 +20,7 @@ Mon anglais est en cours d’amélioration — je vise l’international, un com
 ## 🛠️ Stack actuel
 
 Je travaille principalement avec :
-
-![Status](https://img.shields.io/badge/Status-En%20d%C3%A9veloppement-blue)
-![Version](https://img.shields.io/badge/Version-1.0.0-purple)
-![Passion](https://img.shields.io/badge/Made%20with-Passion-red)
-![Stack](https://img.shields.io/badge/HTML-CSS-JS-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
-
+ HTML - CSS - JS - GITHUB & GIT - MYSQL
 
 Ce portfolio évoluera au fil de mes apprentissages et découvertes.
 
