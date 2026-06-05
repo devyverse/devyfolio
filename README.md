@@ -4,7 +4,7 @@ Bienvenue dans mon univers numérique — **devyverse**, un portfolio web person
 
 ## 🚀 À propos
 
-Je suis **Dévy**, développeur web en formation basé à La Réunion 🌋. Ce projet est mon espace d’expérimentation, où je construis avec les bases du web et développe mes compétences pas à pas.
+Je suis **Dévy**, développeur web en auto-formation. Ce projet est mon espace d’expérimentation, où je construis avec les bases du web et développe mes compétences pas à pas.
 
 Actuellement en **recherche d’alternance** pour devenir **concepteur d’applications**, je suis motivé, curieux et passionné par le développement.  
 Mon anglais est en cours d’amélioration — je vise l’international, un commit à la fois 🌍.
@@ -49,8 +49,8 @@ Ce portfolio est en constante amélioration. Je teste, j’apprends, je corrige.
 ## 📬 Me contacter
 
 Tu veux échanger, collaborer ou juste discuter ?  
-👉 [LinkedIn](https://www.linkedin.com/in/devyreale-dev/)
-👉 [Email](mailto:reale.devy2000@gmail.com)
+https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white[LinkedIn](https://www.linkedin.com/in/devyreale-dev/)
+https://img.shields.io/badge/Email-Contact-red?logo=gmail&logoColor=white[Email](mailto:reale.devy2000@gmail.com)
 
 ## 🌀 Remerciements
 
